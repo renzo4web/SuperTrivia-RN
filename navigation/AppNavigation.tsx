@@ -2,7 +2,7 @@ import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import StackNavigator from './StackNavigator'
 
-const Navigation = () => {
+const AppNavigation = function () {
   return (
     <NavigationContainer>
       <StackNavigator />
@@ -10,4 +10,4 @@ const Navigation = () => {
   )
 }
 
-export default Navigation
+export default AppNavigation

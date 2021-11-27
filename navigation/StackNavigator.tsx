@@ -1,27 +1,26 @@
 import { createStackNavigator } from '@react-navigation/stack'
 import React from 'react'
-import LoginScreen from '../screens/LoginScreen'
+import QuizScreen from '../screens/QuizScreen'
 import StartScreen from '../screens/StartScreen'
+import { Routes } from './routes'
 
 export type StackParamList = {
-  LoginScreen: undefined
+  QuizScreen: undefined
   StartScreen: undefined
 }
 
 const Stack = createStackNavigator<StackParamList>()
 
-const StackNavigator = () => {
+const StackNavigator = function () {
   return (
-    <>
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false,
-        }}
-      >
-        <Stack.Screen name="StartScreen" component={StartScreen} />
-        <Stack.Screen name="LoginScreen" component={LoginScreen} />
-      </Stack.Navigator>
-    </>
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
+      <Stack.Screen name={Routes.StartScreen} component={StartScreen} />
+      <Stack.Screen name={Routes.QuizScreen} component={QuizScreen} />
+    </Stack.Navigator>
   )
 }
 

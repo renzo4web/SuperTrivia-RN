@@ -2,12 +2,12 @@ import React from 'react'
 import { Provider as PaperProvider } from 'react-native-paper'
 
 import { theme } from './core/theme'
-import Navigation from './navigation/Navigation'
+import AppNavigation from './navigation/AppNavigation'
 
 export default function App() {
   return (
     <PaperProvider theme={theme}>
-      <Navigation />
+      <AppNavigation />
     </PaperProvider>
   )
 }
